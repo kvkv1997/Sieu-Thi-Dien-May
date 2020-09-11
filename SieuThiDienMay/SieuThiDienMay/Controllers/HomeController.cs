@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace SIeuThiDienMay.Controllers
+namespace SieuThiDienMay.Controllers
 {
     public class HomeController : Controller
     {

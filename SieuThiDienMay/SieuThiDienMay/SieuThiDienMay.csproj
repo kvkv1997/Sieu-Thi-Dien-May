@@ -7,12 +7,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{E20DAA84-7731-402B-A5D2-11C74537F2A9}</ProjectGuid>
+    <ProjectGuid>{AA0A4FA5-EE9D-4727-BBA5-A4658BA72EFE}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SIeuThiDienMay</RootNamespace>
-    <AssemblyName>SIeuThiDienMay</AssemblyName>
+    <RootNamespace>SieuThiDienMay</RootNamespace>
+    <AssemblyName>SieuThiDienMay</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
@@ -227,7 +227,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Model\Model.csproj">
-      <Project>{7a845b0c-1e1d-4224-95a7-ee49df2c8e63}</Project>
+      <Project>{451bf5d0-96c5-4dc3-a1e6-dd4b838f60ae}</Project>
       <Name>Model</Name>
     </ProjectReference>
   </ItemGroup>
@@ -247,7 +247,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>10939</DevelopmentServerPort>
+          <DevelopmentServerPort>2413</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:19623/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
