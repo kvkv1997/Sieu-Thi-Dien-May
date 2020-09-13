@@ -53,3 +53,5 @@ C:\Users\Admin\Desktop\HK1-20202021\PhatTrien\Project\SieuThiDienMay\SieuThiDien
 C:\Users\Admin\Desktop\HK1-20202021\PhatTrien\Project\SieuThiDienMay\SieuThiDienMay\obj\Debug\SieuThiDienMay.csprojResolveAssemblyReference.cache
 C:\Users\Admin\Desktop\HK1-20202021\PhatTrien\Project\SieuThiDienMay\SieuThiDienMay\obj\Debug\SieuThiDienMay.dll
 C:\Users\Admin\Desktop\HK1-20202021\PhatTrien\Project\SieuThiDienMay\SieuThiDienMay\obj\Debug\SieuThiDienMay.pdb
+C:\Users\Admin\Desktop\HK1-20202021\PhatTrien\Project\SieuThiDienMay\SieuThiDienMay\bin\Model.dll
+C:\Users\Admin\Desktop\HK1-20202021\PhatTrien\Project\SieuThiDienMay\SieuThiDienMay\bin\Model.pdb
