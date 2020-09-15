@@ -51,5 +51,11 @@ namespace SieuThiDienMay.Areas.Admin.Controllers
             }
             return View("Index");
         }
-	}
+        public ActionResult Logout()
+        {
+            Session.Clear();//remove session
+            return RedirectToAction("Login");
+        }
+
+    }
 }
