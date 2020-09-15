@@ -8,7 +8,7 @@ namespace Model.EF
     public partial class SieuThiDienMayDbContext : DbContext
     {
         public SieuThiDienMayDbContext()
-            : base("name=SieuThiDienMay")
+            : base("name=SieuThiDienMay1")
         {
         }
 
@@ -26,6 +26,8 @@ namespace Model.EF
         public virtual DbSet<PhieuXuat> PhieuXuats { get; set; }
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<ProductCategory> ProductCategories { get; set; }
+        public virtual DbSet<tbl_Function> tbl_Function { get; set; }
+        public virtual DbSet<tbl_TypeEmp> tbl_TypeEmp { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

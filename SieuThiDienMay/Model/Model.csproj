@@ -59,12 +59,14 @@
     <Compile Include="EF\Employee.cs" />
     <Compile Include="EF\Menu.cs" />
     <Compile Include="EF\MenuType.cs" />
+    <Compile Include="EF\SieuThiDienMayDbContext.cs" />
     <Compile Include="EF\NhaCungCap.cs" />
     <Compile Include="EF\PhieuNhap.cs" />
     <Compile Include="EF\PhieuXuat.cs" />
     <Compile Include="EF\Product.cs" />
     <Compile Include="EF\ProductCategory.cs" />
-    <Compile Include="EF\SieuThiDienMayDbContext.cs" />
+    <Compile Include="EF\tbl_Function.cs" />
+    <Compile Include="EF\tbl_TypeEmp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace SieuThiDienMay.Areas.Admin.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
         //
         // GET: /Admin/Home/
@@ -14,6 +14,6 @@ namespace SieuThiDienMay.Areas.Admin.Controllers
         {
             return View();
         }
-     
+        
     }
 }
