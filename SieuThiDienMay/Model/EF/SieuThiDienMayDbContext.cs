@@ -26,8 +26,10 @@ namespace Model.EF
         public virtual DbSet<PhieuXuat> PhieuXuats { get; set; }
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<ProductCategory> ProductCategories { get; set; }
-        public virtual DbSet<tbl_Function> tbl_Function { get; set; }
-        public virtual DbSet<tbl_TypeEmp> tbl_TypeEmp { get; set; }
+        public virtual DbSet<SysFunction> SysFunctions { set; get; }
+        public virtual DbSet<Role> Roles { get; set; }
+        public virtual DbSet<LoaiTV> LoaiTVs { get; set; }
+
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

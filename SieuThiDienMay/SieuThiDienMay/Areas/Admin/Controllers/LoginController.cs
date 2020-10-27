@@ -33,7 +33,7 @@ namespace SieuThiDienMay.Areas.Admin.Controllers
                     userSession.UserName = user.UserName;
                     userSession.UserID = user.ID_Employee;
                     Session.Add(CommonConstants.USER_SESSION, userSession);
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("HomeIndex", "HomeAdmin");
                     case 0:
                     ModelState.AddModelError("", "Tài khoản không tồn tại.");
                     break;

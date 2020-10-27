@@ -6,11 +6,11 @@ using System.Web.Mvc;
 
 namespace SieuThiDienMay.Areas.Admin.Controllers
 {
-    public class HomeController : BaseController
+    public class HomeAdminController : BaseController
     {
         //
         // GET: /Admin/Home/
-        public ActionResult Index()
+        public ActionResult HomeIndex()
         {
             return View();
         }

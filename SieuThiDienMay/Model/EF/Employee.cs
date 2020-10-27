@@ -40,8 +40,10 @@ namespace Model.EF
         [StringLength(50)]
         public string ModifiedBy { get; set; }
 
-        public int? Type_Emp { get; set; }
+        [StringLength(50)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public string Type_Emp { get; set; }
 
-        public virtual tbl_TypeEmp tbl_TypeEmp { get; set; }
+        
     }
 }
