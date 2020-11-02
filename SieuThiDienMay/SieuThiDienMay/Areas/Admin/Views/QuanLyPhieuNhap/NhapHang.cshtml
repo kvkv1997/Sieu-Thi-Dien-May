@@ -1,0 +1,188 @@
+﻿@using Model2
+@model Model2.PhieuNhap
+@{
+    ViewBag.Title = " Nhập Hàng";
+
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+@{
+    IEnumerable<Model2.NhaCungCap> lstNCC = ViewBag.ID_NCC as IEnumerable<Model2.NhaCungCap>;
+}
+<h1 class="mt-4">Nhập Hàng</h1>
+<ol class="breadcrumb mb-4">
+    <li class="breadcrumb-item active">Trang chủ nhập hàng</li>
+</ol>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script type="text/javascript">
+    $.noConflict();
+    jQuery(document).ready(function ($) {
+        $('.date').datepicker();
+    });
+</script>
+@using (Html.BeginForm())
+{
+    <div class="row">
+        <div class="ThongtinPhieuNhap col-md-5 ">
+
+            <lable class="col-sm-2">Nhà Cung Cấp</lable>
+            <select class="ID_NCC col-sm-2" name="ID_NCC">
+                @foreach (var item in lstNCC)
+                {
+                    <option value="@item.ID_NCC">@item.Name</option>
+                }
+            </select>
+
+        </div>
+    </div>
+    <div class="clearfix">   </div>
+    <br />
+
+
+    <div class="row">
+        <div class="col-md-5">
+
+            <lable class="col-sm-3">Ngày Nhập</lable>
+            <input name="NgayNhap" class="date" col-sm-3" type="text" />
+
+        </div>
+    </div>
+
+
+    <div class="clearfix">   </div>
+    <br />
+    <br />
+    <table class="table tblChiTietPhieuNhap">
+        @{ IEnumerable<Product> lstSanPham = ViewBag.ListSanPham as IEnumerable<Product>;}
+       
+        <tr class="trAppend"style="display:none";>
+            <td>
+                <select class="ddlSanPham" name="">
+                    @foreach (var item in lstSanPham)
+                    {
+                        <option value="@item.ID_Product">@item.TenSP</option>
+                    }
+                </select>
+            </td>
+            <td>
+                <input name="" class="txtDonGia" value="0" />
+
+            </td>
+            <td>
+                <input name="" class="txtSoLuong" value="0" />
+
+            </td>
+            <td>
+                <input class="btnDelete btn btn-danger" style="width:30px ; height:30px" value="-" />
+
+            </td>
+
+        </tr>
+        <tr data-id="-1" class="trFirstChild">
+            <td> Sản phẩm</td>
+            <td>
+                Đơn Giá Nhập
+            </td>
+            <td>
+                Số lượng nhập
+            </td>
+        </tr>
+    </table>
+
+    <input type="button" value="+" class="btn btn-success" id="btnAdd" />
+    <input type="submit" value="Nhập hàng" class="btn btn-primary" id="btnNhapHang" />
+
+}
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<script>
+        $("#btnAdd").click(function () {
+            var id_cuoi = $(".tblChiTietPhieuNhap").find("tr:last-child").attr("data-id");
+            i = parseInt(id_cuoi) + 1;
+            var tdnoidung = $(".trAppend").html();
+            var trnoidung = "<tr class=\"trAppended\" data-id=\"" + i + "\">" + tdnoidung + "</tr>";
+            $(".tblChiTietPhieuNhap").append(trnoidung);
+            loadIDLenThe();
+        });
+            
+            function loadIDLenThe() {
+                $(".trAppended").each(function () {
+                    var id = $(this).attr("data-id");
+                    var nameMaSanPham = "[" + id + "].ID_Product";
+                    var nameSoLuongNhap = "[" + id + "].SoLuong";
+                    var nameGiaNhap = "[" + id + "].GiaNhap";
+                    $(this).find(".ddlSanPham").attr("name", nameMaSanPham);
+                    $(this).find(".txtDonGia").attr("name", nameGiaNhap);
+                    $(this).find(".txtSoLuong").attr("name", nameSoLuongNhap);
+
+                });
+        };
+            function CapNhatID() {
+                var id_cuoi = $(".tblChiTieuPhieuNhap").find(".trFirstChild").attr("data-id");
+                i = parseInt(id_cuoi) + 1;
+                $(".trAppended").each(function () {
+                    var id = i;
+                    $(this).attr("data-id", i);
+                    var nameMaSanPham = "[" + id + "].ID_Product";
+                    var nameSoLuongNhap = "[" + id + "].SoLuong";
+                    var nameGiaNhap = "[" + id + "].GiaNhap";
+                    $(this).find(".ddlSanPham").attr("name", nameMaSanPham);
+                    $(this).find(".txtDonGia").attr("name", nameGiaNhap);
+                    $(this).find(".txtSoLuong").attr("name", nameSoLuongNhap);
+                    i++;
+                });
+           
+        };
+        $("body").delegate(".btnDelete", "click", function () {
+            $(this).closest(".trAppended").remove();
+            CapNhatID();
+        });
+        $("#btnNhapHang").click(function () {
+            if (kiemtraDonGia() == false) {
+                return false;
+            }
+            if (kiemtraSoLuong() == false) {
+                return false;
+            }
+        });
+        function kiemtraDonGia() {
+            var bl = true;
+            $(".txtDonGia").each(function () {
+                var giatri = $(this).val();
+                if (isNaN(giatri) == true) {
+                    alert("Đơn giá không hợp lệ");
+                    bl = false;
+                    return bl;
+                }
+                if (giatri < 0) {
+                    alert("Đơn giá phải là số dương");
+                    bl = false;
+                    return bl;
+                }
+
+            });
+            return bl;
+        };
+        function kiemtraSoLuong() {
+            var bl = true;
+            $(".txtSoLuong").each(function () {
+                var giatri = $(this).val();
+                if (isNaN(giatri) == true) {
+                    alert("Số lượng không hợp lệ");
+                    bl = false;
+                    return bl;
+                }
+                if (giatri < 0) {
+                    alert("Số lượng phải là số dương");
+                    bl = false;
+                    return bl;
+                }
+
+            });
+            return bl;
+        };
+</script>
+

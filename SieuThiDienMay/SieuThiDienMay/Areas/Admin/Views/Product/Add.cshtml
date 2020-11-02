@@ -1,0 +1,62 @@
+﻿@model Model.Product
+
+@{
+    ViewBag.Title = "Add";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="text-align:center">Thêm Mới Sản Phẩm</h2>
+<hr />
+<div class="tab-content">
+    <div class="alert-danger">
+        @ViewBag.Message
+        @Html.ValidationSummary()
+    </div>
+
+    @using (Html.BeginForm())
+    {
+        
+            <div class="form-group row" style="margin-left:40px">
+                <label class="col-sm-2"> Mã Sản Phẩm </label>
+                @Html.TextBoxFor(m => m.MaSP, new { @class = "col-sm-4 form-control" })
+            </div>
+    
+        <div class="form-group row" style="margin-left:40px; margin-top:15px">
+            <label class="col-sm-2"> Tên Sản Phẩm </label>
+            @Html.TextBoxFor(m => m.TenSP, new { @class = "col-sm-4 form-control " })
+        </div>
+        <div class="form-group row" style="margin-left:40px ; margin-top:15px">
+            <label class="col-sm-2">Giá Bán </label>
+            @Html.TextBoxFor(m => m.GiaBan, new { @class = "col-sm-4 form-control " })
+        </div>
+
+        <div class="form-group row" style="margin-left:40px ; margin-top:15px">
+            <label class="col-sm-2"> Giá Nhập </label>
+            @Html.TextBoxFor(m => m.GiaNhap, new { @class = "col-sm-4 form-control " })
+        </div>
+        <div class="form-group row" style="margin-left:40px; margin-top:15px">
+            <label class="col-sm-2"> Giá Khuyến Mãi </label>
+            @Html.TextBoxFor(m => m.GiaKM, new { @class = "col-sm-4 form-control " })
+        </div>
+        <div class="form-group row" style="margin-left:40px; margin-top:15px">
+            <label class="col-sm-2"> Số Lượng</label>
+            @Html.TextBoxFor(m => m.Quantity, new { @class = "col-sm-4 form-control " })
+        </div>
+        <div class="form-group row" style="margin-left:40px ; margin-top:15px">
+            <label class="col-sm-2"> Nhà Cung Cấp </label>
+            @Html.DropDownListFor(m =>m.NhaCungCap,null, new { @class = "col-sm-4 form-control " })
+        </div>
+        <div class="form-group row" style="margin-left:40px; margin-top:15px">
+            <label class="col-sm-2"> Mô Tả Sản Phẩm </label>
+            @Html.TextAreaFor(m => m.Mota, new { @class = "col-sm-4 form-control " })
+        </div>
+        <div class="form-group row" style="margin-left:60px; margin-top:15px">
+            <input type="submit" value="Lưu" class=" btn btn-primary" />
+        </div>
+
+    }
+    <div class="btn btn-group" style="margin-left:50px; margin-top:15px">
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+
+</div>

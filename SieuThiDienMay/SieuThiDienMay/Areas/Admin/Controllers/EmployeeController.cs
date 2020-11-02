@@ -1,4 +1,5 @@
-﻿using Model.DAO;
+﻿
+using Model2.DAO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,6 +35,7 @@ namespace SieuThiDienMay.Areas.Admin.Controllers
         [HttpPost]
         public ActionResult Create(FormCollection collection)
         {
+            
             try
             {
                 // TODO: Add insert logic here

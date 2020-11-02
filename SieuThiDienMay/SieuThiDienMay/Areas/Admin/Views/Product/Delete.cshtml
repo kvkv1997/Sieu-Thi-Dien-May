@@ -1,0 +1,15 @@
+﻿
+@model Model.Product
+    @{ 
+        ViewBag.Title = " Xóa Sản phẩm";
+    }
+<div class="alert-danger">
+    Bạn có chắc muốn xóa sản phẩm @Model.TenSP không ?
+</div>
+@using (Html.BeginForm("DeletePost","Product",FormMethod.Post))
+{
+    <input type="hidden" value="@Model.ID_Product" name="Masp" />
+    <input type="submit" class="btn btn-danger" value="Xóa" />
+    @Html.ActionLink("Hủy bỏ", "Index",null,new {@class ="btn btn-secondary" });
+
+}

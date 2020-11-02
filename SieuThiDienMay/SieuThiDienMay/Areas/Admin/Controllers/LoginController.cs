@@ -1,4 +1,5 @@
-﻿using Model.DAO;
+﻿
+using Model2.DAO;
 using SieuThiDienMay.Areas.Admin.Models;
 using SieuThiDienMay.Common;
 using System;
@@ -51,6 +52,7 @@ namespace SieuThiDienMay.Areas.Admin.Controllers
             }
             return View("Index");
         }
+
         public ActionResult Logout()
         {
             Session.Clear();//remove session

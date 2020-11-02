@@ -17,7 +17,6 @@ C:\Users\Admin\Desktop\HK1-20202021\PhatTrien\Project\SieuThiDienMay\SieuThiDien
 C:\Users\Admin\Desktop\HK1-20202021\PhatTrien\Project\SieuThiDienMay\SieuThiDienMay\bin\Microsoft.Owin.Security.OAuth.dll
 C:\Users\Admin\Desktop\HK1-20202021\PhatTrien\Project\SieuThiDienMay\SieuThiDienMay\bin\Microsoft.Owin.Security.Twitter.dll
 C:\Users\Admin\Desktop\HK1-20202021\PhatTrien\Project\SieuThiDienMay\SieuThiDienMay\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\Admin\Desktop\HK1-20202021\PhatTrien\Project\SieuThiDienMay\SieuThiDienMay\bin\Model.dll
 C:\Users\Admin\Desktop\HK1-20202021\PhatTrien\Project\SieuThiDienMay\SieuThiDienMay\bin\Newtonsoft.Json.dll
 C:\Users\Admin\Desktop\HK1-20202021\PhatTrien\Project\SieuThiDienMay\SieuThiDienMay\bin\Owin.dll
 C:\Users\Admin\Desktop\HK1-20202021\PhatTrien\Project\SieuThiDienMay\SieuThiDienMay\bin\System.Web.Helpers.dll
@@ -28,7 +27,6 @@ C:\Users\Admin\Desktop\HK1-20202021\PhatTrien\Project\SieuThiDienMay\SieuThiDien
 C:\Users\Admin\Desktop\HK1-20202021\PhatTrien\Project\SieuThiDienMay\SieuThiDienMay\bin\System.Web.WebPages.dll
 C:\Users\Admin\Desktop\HK1-20202021\PhatTrien\Project\SieuThiDienMay\SieuThiDienMay\bin\System.Web.WebPages.Razor.dll
 C:\Users\Admin\Desktop\HK1-20202021\PhatTrien\Project\SieuThiDienMay\SieuThiDienMay\bin\WebGrease.dll
-C:\Users\Admin\Desktop\HK1-20202021\PhatTrien\Project\SieuThiDienMay\SieuThiDienMay\bin\Model.pdb
 C:\Users\Admin\Desktop\HK1-20202021\PhatTrien\Project\SieuThiDienMay\SieuThiDienMay\bin\System.Web.Helpers.xml
 C:\Users\Admin\Desktop\HK1-20202021\PhatTrien\Project\SieuThiDienMay\SieuThiDienMay\bin\System.Web.Mvc.xml
 C:\Users\Admin\Desktop\HK1-20202021\PhatTrien\Project\SieuThiDienMay\SieuThiDienMay\bin\System.Web.Optimization.xml
@@ -54,7 +52,6 @@ C:\Users\Admin\Desktop\HK1-20202021\PhatTrien\Project\SieuThiDienMay\SieuThiDien
 C:\Users\Admin\Desktop\HK1-20202021\PhatTrien\Project\SieuThiDienMay\SieuThiDienMay\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\Admin\Desktop\HK1-20202021\PhatTrien\Project\SieuThiDienMay\SieuThiDienMay\obj\Debug\SieuThiDienMay.dll
 C:\Users\Admin\Desktop\HK1-20202021\PhatTrien\Project\SieuThiDienMay\SieuThiDienMay\obj\Debug\SieuThiDienMay.pdb
-C:\Users\Admin\Desktop\HK1-20202021\PhatTrien\Project\SieuThiDienMay\SieuThiDienMay\bin\Model.dll.config
 C:\Users\Admin\Desktop\HK1-20202021\PhatTrien\Project\SieuThiDienMay\SieuThiDienMay\obj\Debug\SieuThiDienMay.csprojAssemblyReference.cache
 C:\Users\Admin\Desktop\HK1-20202021\PhatTrien\Project\SieuThiDienMay\SieuThiDienMay\obj\Debug\SieuThiDienMay.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Desktop\HK1-20202021\PhatTrien\Project\SieuThiDienMay\SieuThiDienMay\obj\Debug\SieuThiDienMay.csproj.CopyComplete
@@ -62,3 +59,10 @@ C:\Users\Admin\Desktop\HK1-20202021\PhatTrien\Project\SieuThiDienMay\SieuThiDien
 C:\Users\Admin\Desktop\HK1-20202021\PhatTrien\Project\SieuThiDienMay\SieuThiDienMay\bin\PagedList.Mvc.dll
 C:\Users\Admin\Desktop\HK1-20202021\PhatTrien\Project\SieuThiDienMay\SieuThiDienMay\bin\PagedList.xml
 C:\Users\Admin\Desktop\HK1-20202021\PhatTrien\Project\SieuThiDienMay\SieuThiDienMay\bin\PagedList.Mvc.xml
+C:\Users\Admin\Desktop\HK1-20202021\PhatTrien\Project\SieuThiDienMay\SieuThiDienMay\bin\System.Net.Http.Formatting.dll
+C:\Users\Admin\Desktop\HK1-20202021\PhatTrien\Project\SieuThiDienMay\SieuThiDienMay\bin\System.Web.Http.dll
+C:\Users\Admin\Desktop\HK1-20202021\PhatTrien\Project\SieuThiDienMay\SieuThiDienMay\bin\System.Net.Http.Formatting.xml
+C:\Users\Admin\Desktop\HK1-20202021\PhatTrien\Project\SieuThiDienMay\SieuThiDienMay\bin\System.Web.Http.xml
+C:\Users\Admin\Desktop\HK1-20202021\PhatTrien\Project\SieuThiDienMay\SieuThiDienMay\bin\Model2.dll
+C:\Users\Admin\Desktop\HK1-20202021\PhatTrien\Project\SieuThiDienMay\SieuThiDienMay\bin\Model2.pdb
+C:\Users\Admin\Desktop\HK1-20202021\PhatTrien\Project\SieuThiDienMay\SieuThiDienMay\bin\Model2.dll.config
