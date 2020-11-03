@@ -1,0 +1,43 @@
+﻿@model Model2.Product
+@{
+    ViewBag.Title = "NhapHangDon";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<legend>Nhập hàng cho sản phẩm <b style="color:rgb(192,0,0)">@Model.TenSP</b></legend>
+<hr />
+<br />
+<div class="row">
+    <div class="col-md-9">
+        <div class="ttSP">
+            <h3>Nhà Cung Cấp: @Model.NhaCungCap </h3>
+            <h3>Mã Sản Phẩm : @Model.MaSp </h3>
+            <h3>Số Lượng Tồn: @Model.Quantity </h3>
+        </div>
+    </div>
+    <br />
+    <fieldset>
+        <legend> Thông Tin Nhập Hàng</legend>
+    </fieldset>
+   @using (Html.BeginForm("NhapHangDon", "QuanLyPhieuNhap"))
+   {
+<div class="row">
+    <div class="col-md-4">
+        @{var lstNCC = (SelectList)ViewBag.MaNCC; }
+        @*Nhà Cung Cấp : @Html.DropDownList("MaNCC", lstNCC, new { @class = "MaNCC" })*@
+    </div>
+    <div class="col-md-4">
+        Số lượng nhập : @Html.TextBox("SoLuongNhap");
+    </div>
+    <div class="col-md-4">
+        Đơn giá nhập : @Html.TextBox("DonGiaNhap");
+    </div>
+</div>
+    <div class="clear right" style="text-align:right;">
+        <br />
+        <input type="submit" class="btn btn-primary" value="Nhập hàng" />
+
+    </div>
+   }
+</div>
+

@@ -7,11 +7,8 @@
 
 
         @Html.ActionLink("Quản Lý Sản Phẩm", "Index", "Product", new { page = 1, pageSize = 10 }, new { @class = "nav-link collapsed" })
-        @Html.ActionLink("Nhập Hàng", "NhapHang", "QuanLyPhieuNhap",null, new { @class = "nav-link collapsed" })
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
-            <div class="sb-nav-link-icon"><i class="fa fa-columns"></i></div>
-            Quản Lý Nhập Hàng
-        </a>
+        @Html.ActionLink("Nhập Hàng", "NhapHang", "QuanLyPhieuNhap", null, new { @class = "nav-link collapsed" })
+        @Html.ActionLink("Sản Phẩm Gần Hết", "DSSPHetHang", "QuanLyPhieuNhap", null, new { @class = "nav-link collapsed" })
 
     </div>
 </div>

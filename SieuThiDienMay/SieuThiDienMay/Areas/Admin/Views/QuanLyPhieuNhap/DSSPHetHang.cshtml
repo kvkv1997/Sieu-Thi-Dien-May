@@ -1,0 +1,67 @@
+﻿@model IEnumerable<Model2.Product>
+@{
+    ViewBag.Title = "Danh Sách Sản Phẩm Gần Hết";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<main>
+    <div class="container-fluid">
+        <h1 class="mt-4">Danh Sách Sản Phẩm Gần Hết </h1>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+
+                    <div class="panel panel-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered table table-striped table-hover " id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>Mã Sản Phẩm</th>
+                                        <th>Tên Sản Phẩm</th>
+                                        <th>Giá Nhập</th>
+                                        <th>Giá Bán</th>
+
+                                        <th>Số Lượng</th>
+
+                                        <th>&nbsp;</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                   @foreach( var item in Model)
+                                    {
+                                        <tr>
+                                            <td>@item.MaSp</td>
+                                            <td>@item.TenSP</td>
+                                            <td>@item.GiaNhap</td>
+                                            <td>@item.GiaBan</td>
+                                            <td>@item.Quantity</td>
+
+                                            <td>
+                                                @Html.ActionLink("Nhập Hàng", "NhapHangDon", new { id = item.ID_Product }, new { @class = "btn btn-secondary" })
+
+                                            </td>
+                                        </tr>
+                                    }
+
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <th>Mã Sản Phẩm</th>
+                                        <th>Tên Sản Phẩm</th>
+                                        <th>Giá Nhập</th>
+                                        <th>Giá Bán</th>
+                                        <th>Số Lượng</th>
+                                        <th>&nbsp;</th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+

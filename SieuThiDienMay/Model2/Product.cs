@@ -42,6 +42,7 @@ namespace Model2
 
         [StringLength(50)]
         public string MaSp { get; set; }
+      //  public Boolean Status { get; set; } = true;
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<BillDetail> BillDetails { get; set; }

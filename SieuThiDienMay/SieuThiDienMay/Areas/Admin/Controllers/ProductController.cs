@@ -8,6 +8,8 @@ namespace SieuThiDienMay.Areas.Admin.Controllers
     public class ProductController : Controller
     {
         // GET: Admin/Product
+        SieuThiDienMayDbContext db = new SieuThiDienMayDbContext();
+
         public ActionResult Index(int page = 1 , int pageSize = 10)
         {
             var dao = new ProductDao();
@@ -86,15 +88,15 @@ namespace SieuThiDienMay.Areas.Admin.Controllers
             return View(pro);
         }
         [HttpPost]
-        public ActionResult DeletePost([System.Web.Http.FromBody] int Masp)
+        public ActionResult DeletePost([System.Web.Http.FromBody] int MaSp)
         {
-            var pro = ProductDao.getByID(Masp);
+            var pro = ProductDao.getByID(MaSp);
             if (pro == null)
             {
                 ViewBag.Message = "Sản phẩm không tồn tại";
                 return RedirectToAction("Index");
             }
-            ProductDao.Delete(Masp);
+            ProductDao.Delete(MaSp);
             return RedirectToAction("Index");
 
         }
@@ -102,6 +104,18 @@ namespace SieuThiDienMay.Areas.Admin.Controllers
         {
             var dao = new NhaCungCapDao();
             ViewBag.NhaCungCap = new SelectList(dao.ListAll(),"ID_NCC","Name",selectedID);
+        }
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                if (db != null)
+                {
+                    db.Dispose();
+                }
+                db.Dispose();
+            }
+            base.Dispose(disposing);
         }
     }
 }
